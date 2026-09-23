@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#120b12" />
+  <title>For_Maria.✨</title>
+  <style>
+:root{
+  --bg:#120b12;
+  --ink:#fff7fb;
+  --muted:#d7c6cf;
+  --accent:#ff9fc5;
+  --accent-2:#f7d6a6;
+  --glass:rgba(255,255,255,.11);
+  --line:rgba(255,255,255,.18);
+  --shadow:0 30px 80px rgba(0,0,0,.36);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+
+.stars{position:fixed;inset:0;pointer-events:none;opacity:.32;z-index:0;background-image:radial-gradient(circle at 20% 20%,rgba(255,255,255,.65) 0 1px,transparent 1px),radial-gradient(circle at 80% 35%,rgba(255,255,255,.45) 0 1px,transparent 1px),radial-gradient(circle at 55% 78%,rgba(255,255,255,.4) 0 1px,transparent 1px);background-size:180px 180px,240px 240px,300px 300px;animation:drift 20s linear infinite}
+.hero,main,.footer{position:relative;z-index:1}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:space-between;padding:26px clamp(22px,5vw,72px) 30px;background:radial-gradient(circle at 80% 20%,rgba(255,146,193,.2),transparent 26%),radial-gradient(circle at 15% 80%,rgba(154,107,173,.22),transparent 30%)}
+.nav{display:flex;justify-content:space-between;align-items:center;font-size:.88rem;letter-spacing:.06em;text-transform:uppercase}
+.brand{font-weight:700;letter-spacing:.08em}.brand span{color:var(--accent)}
+.nav-link{opacity:.8;transition:.3s}.nav-link:hover{opacity:1;transform:translateY(-2px)}
+.hero-inner{max-width:980px;padding:13vh 0 9vh}.hero-kicker,.eyebrow{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;opacity:.72}
+h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(3.5rem,9vw,8.3rem);line-height:.9;letter-spacing:-.04em;margin:18px 0 28px;font-weight:500}.hero h1 span{color:var(--accent)}
+.hero-copy{max-width:610px;color:var(--muted);font-size:clamp(1rem,2.2vw,1.25rem);line-height:1.75;margin-bottom:34px}
+.cta{display:inline-flex;gap:14px;align-items:center;padding:14px 20px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.05);backdrop-filter:blur(14px);transition:.35s}.cta:hover{transform:translateY(-4px);background:rgba(255,255,255,.1)}
+.scroll-hint{align-self:flex-start;opacity:.6;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;animation:bob 2.4s ease-in-out infinite}.scroll-hint span{margin-left:10px}
+
+.photo-panel{min-height:100vh;position:relative;display:flex;align-items:flex-end;padding:clamp(26px,7vw,90px);isolation:isolate;overflow:hidden;background-size:cover;background-position:center}
+.panel-one{background-image:linear-gradient(rgba(24,10,18,.25),rgba(24,10,18,.25)),url('data:image/jpeg;base64,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'),linear-gradient(140deg,#4d2740,#1b121b 55%,#8d5b72)}
+.panel-two{background-image:linear-gradient(rgba(16,10,18,.25),rgba(16,10,18,.25)),url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2N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'),linear-gradient(140deg,#26324b,#111016 55%,#8f6676)}
+.panel-three{background-image:linear-gradient(rgba(15,8,12,.25),rgba(15,8,12,.3)),url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCACAAFcDASIAAhEBAxEB/8QAGgAAAQUBAAAAAAAAAAAAAAAABQABAgMEBv/EADUQAAEEAQMBBQUHBAMAAAAAAAEAAgMRBAUSISIxQVFh4RMUFjJxBiNSZIGRkkJUwdFyorH/xAAYAQADAQEAAAAAAAAAAAAAAAAAAgMBBP/EAB8RAAMBAAMBAAMBAAAAAAAAAAABAhEDEiExEyJBUf/aAAwDAQACEQMRAD8AMgJ64o8pw1SIAaSVLsWwgw9W0n91J0kbDTntafAmkO1jL93wy9lh7jtb5eK5RrzNN1vNntcTytS0V+eHekirUdyw6fLuwo7fu29N/RXiQbikbLLj30eYdQ+iiApF2/nwSATp+EqXotqiByVaBwmA6Qt0XCt46CkpP+QpJGxakf2lCx3KuTNY0iyfoGm1UXEchU5ErhC4uftFclLjOvECtbzfbStjAcAOeRXKGQdMwNA+VKEz98hcPFOyTaQRwQrpYsOdvWdRpscjcS38WeAeKWmwO1c7i5UmRKyMzua8njc7g+q24meXZbsaVo32Wj6hc9xX06o5J+BuF1tNDi1Y/oaXWKHJvgKnHJETukdqB6/qT3XiMtre1/n4BNGvwnyJJthCTXMFrthe4i+XBthbhK17Q5psEWCO9cJRNLpdCmecAtd2MdTbT0sWiR+zwKFxLSkqS4hpSUWx6h6DjqnhDJ+6x6hnOmgLNjmg88lE6aR3D6IdqcZ93c4Ua4sq5DsBimtIpk4hK1Y2aR2SJdx9puB3eapV8GPLK9myNxBI5A4QadHPmT4+G98tMNkN282e5c1LI6SQueS5zjZJRPXJ3B7Ig47KuvO+1CEsr+j3W+FjJA08hFdO1FsAMcpqM82B2FBwaIJFgd3ipyPjktzGGN18NBtqGt8Cac+o7De10Qe2nNcLBHekua07UTigxyNL4jyADyCkuaopPw6Pyy/WFg8LLqb2+5uHeapSEvhSqyYTkMrkAcrqONAdMnPBTLQEjOiykxuiv5TYH1QZatPyG487jJZa5tUBaH8NRo1yxlR3+D/KGrVqGQ3Ima5gcAG11LKsXwG/RJBJMtMJDtSV0WJPLGJGMtt1dhJY2jGdL7qK6dv6gn/KY42R/RkMZ/xiH+1rAUgFuI0CO+z+9xccnkmz0eqXw4P7o/w9UcpSAQAB+HPzR/h6qcf2eDHhxyLA7tnqjoCfajQAORoIe8ET7aH4PVVfDv5k/wAPVdA9vKbatWYAB+HfzJ/h6pfDv5n/AKeqP7UtqABePpnu0Gz2u4A38tJIm9vSUklJaLTYqThqkAl2I0rg1KQCcV3py2lmhggE9JrpIuHis03qReOeEzeVIc8pq2vFdnenTFcj0npWbE1I0MKnt6CkrHjoKSRsSl6RDU+0eCQeO/8A8WQ6vgtm9kZ27rry/dLp0Z/prpv0TFwHBTl7SP8ASrIBSdiigZxBUbA7QkQPNQNBHYooRoiNgnzVeRK2IW48KeORtN+Kw65II8QvHaQWp5ekbWME6jr88spbivMUQPBHaf1RjSNUblQMjndUwFWT8/quO70X0iGaWQeydtaynbj3cqjxIjOtnVvPQUlnkkBB5pJQdFK4wRrma6LGEMbyDJ81eC5y1s1Sf3jKcRZa3gcLLGOsWDSvKxE7e0dFomX7bEETyNzOB5hFASO+v1XO4WS3GeHAWDwUUj1CF8gja7qIsAtpRuG34dXHa64zaXnxBSL3V8gVJmd4BQMru419FPpRTvJpbIQPBB9eyQYWxdpcbVmXk5LXgREFtc22+UDzsiXIm+8AtvHApWiWvpz8lr3DPuRLRtQOJPsefun8O8vNDKPgU7bB7CqtasOdPHp2z3gtJBFFJczhahLCC3YHN77tJc1cdJnS+WWf/9k='),linear-gradient(140deg,#41202b,#191017 60%,#9b6a73)}
+.photo-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,2,7,.05) 20%,rgba(4,2,7,.82) 78%,rgba(4,2,7,.96) 100%);z-index:-1}
+.panel-content{max-width:900px;position:relative;z-index:2}.panel-content.wide{max-width:1050px}.big-note{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.1rem,4.4vw,4.8rem);line-height:1.03;letter-spacing:-.025em;margin:17px 0 22px;max-width:920px}.tiny-note{color:#e5d6dd;max-width:700px;font-size:1rem;line-height:1.75}.floating-heart{position:absolute;right:8vw;top:15%;font-size:clamp(5rem,14vw,12rem);color:rgba(255,159,197,.22);animation:float 5s ease-in-out infinite}
+
+.interlude{min-height:72vh;display:grid;place-items:center;padding:80px 20px;background:linear-gradient(180deg,#180d17,#100a10)}.interlude-inner{text-align:center;max-width:920px}.sparkle{font-size:2rem;margin-bottom:18px;animation:spin 7s linear infinite}.interlude blockquote{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2rem,4.5vw,4.6rem);line-height:1.12;letter-spacing:-.02em;margin:16px 0 20px;color:#fff4f9}.translation{color:var(--muted);font-size:1rem;line-height:1.7;margin:0 auto;max-width:630px}
+
+.mood-row{display:flex;flex-wrap:wrap;align-items:center;gap:11px;margin-top:28px;color:#f9eaf0;font-size:.95rem}.mood-row span{padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.1);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.14)}.mood-row .arrow{background:transparent;border:0;padding:0;opacity:.55}
+
+.note-break{display:grid;place-items:center;padding:120px 24px;background:radial-gradient(circle at center,rgba(255,158,194,.14),transparent 32%),#110a11}.note-card{position:relative;max-width:760px;padding:54px 48px 48px;background:linear-gradient(145deg,rgba(255,250,252,.97),rgba(255,242,247,.93));color:#2a1821;border-radius:8px;box-shadow:var(--shadow);transform:rotate(-1.5deg)}.note-card:before{content:"";position:absolute;inset:11px;border:1px solid rgba(42,24,33,.12);pointer-events:none}.note-card h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2rem,4vw,3.6rem);font-weight:500;line-height:1.05;margin:13px 0 16px}.note-card p{font-size:1rem;line-height:1.75}.note-card .eyebrow{color:#7c5665;opacity:1}.tape{position:absolute;top:-18px;left:50%;width:120px;height:32px;transform:translateX(-50%) rotate(-4deg);background:rgba(248,213,167,.72);box-shadow:0 7px 20px rgba(0,0,0,.1)}
+
+.contact-panel{max-width:1000px}.highlight{font-size:clamp(2.3rem,4.8vw,5.1rem)}.highlight strong{color:#ffd2e2;font-weight:700;text-shadow:0 0 30px rgba(255,170,203,.38);text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:8px}.action-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}.action{display:inline-flex;gap:11px;align-items:center;justify-content:center;padding:15px 22px;border-radius:999px;font-weight:700;border:1px solid rgba(255,255,255,.18);transition:.3s}.action.primary{background:#fff0f5;color:#311823}.action.secondary{background:rgba(255,255,255,.08);backdrop-filter:blur(12px)}.action:hover{transform:translateY(-4px) scale(1.01)}.pulse-ring{position:absolute;right:11%;top:22%;width:150px;height:150px;border:1px solid rgba(255,177,207,.3);border-radius:50%;box-shadow:0 0 0 0 rgba(255,177,207,.2);animation:pulse 2.8s ease-out infinite}
+
+.closing{display:grid;place-items:center;min-height:72vh;text-align:center;padding:100px 20px;background:radial-gradient(circle at 50% 30%,rgba(255,159,197,.13),transparent 30%),#110a11}.closing-inner{max-width:850px}.tiny-stars{letter-spacing:.5em;color:#ffb8d0;margin-bottom:18px}.closing h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(3rem,7vw,6rem);font-weight:500;margin:10px 0}.closing p{color:var(--muted);font-size:1.12rem;line-height:1.8}.signature{margin-top:24px;color:#f9dce7;font-family:Georgia,"Times New Roman",serif;font-size:1.05rem}.footer{padding:30px 20px;text-align:center;color:#98848f;font-size:.76rem;letter-spacing:.04em;background:#0d080d}
+
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.75,.2,1)}.reveal.visible{opacity:1;transform:none}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
+@keyframes float{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-18px) rotate(4deg)}}
+@keyframes pulse{0%{transform:scale(.75);opacity:.9}75%,100%{transform:scale(1.45);opacity:0}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes drift{to{background-position:180px 180px,260px 280px,360px 240px}}
+@media (max-width:700px){.nav-link{display:none}.hero{min-height:88vh;padding:20px 20px 24px}.hero-inner{padding-top:8vh}.hero h1{font-size:clamp(3.1rem,18vw,5rem)}.photo-panel{min-height:86vh;padding:24px 20px 42px}.big-note{font-size:clamp(2rem,9vw,3.4rem)}.note-card{padding:44px 25px 32px}.pulse-ring{right:-30px;top:10%;width:120px;height:120px}.action{width:100%}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.001ms!important}}
+@media (max-width:1100px){.hero{padding-left:clamp(18px,5vw,48px);padding-right:clamp(18px,5vw,48px)}.photo-panel{padding-left:clamp(18px,5vw,48px);padding-right:clamp(18px,5vw,48px)}.big-note{font-size:clamp(2rem,6vw,4.4rem)}}.photo-panel{background-image:radial-gradient(circle at 78% 18%,rgba(255,159,197,.18),transparent 24%),linear-gradient(145deg,#2a1628,#120b12 58%,#372034)!important}.panel-one,.panel-two,.panel-three{background-image:inherit!important}
+
+</style>
+</head>
+<body>
+  <div class="stars" aria-hidden="true"></div>
+  <header class="hero">
+    <nav class="nav">
+      <div class="brand">for <span>Maria</span> ✨</div>
+      <a class="nav-link" href="#message">a little note ↓</a>
+    </nav>
+
+    <div class="hero-inner">
+      <div class="hero-kicker">Two conference calls. One tiny website. A slightly nervous heart.</div>
+      <h1>Hi, Maria.<br><span>I wanted to say this properly.</span></h1>
+      <p class="hero-copy">No pressure, no grand speech — just a small corner of the internet carrying a few honest words.</p>
+      <a class="cta" href="#story">Take a little look <span>→</span></a>
+    </div>
+
+    <div class="scroll-hint">scroll slowly <span>↓</span></div>
+  </header>
+
+  <main id="story">
+    <section class="photo-panel panel-one" aria-label="First note over photo one">
+      <div class="photo-overlay"></div>
+      <div class="panel-content reveal">
+        <div class="eyebrow">01 · an honest beginning</div>
+        <p class="big-note">“You are the first girl in my life I’ve spoken to in this manner, so I might make some mistakes in what I say.”</p>
+        <p class="tiny-note">So… please forgive the awkward sentences. I’m still learning how to say things that matter.</p>
+      </div>
+      <div class="floating-heart">♡</div>
+    </section>
+
+    <section class="interlude">
+      <div class="interlude-inner reveal">
+        <div class="sparkle">✦</div>
+        <p class="eyebrow">a little shayari</p>
+        <blockquote>
+          “Baat chhoti si hai, par dil se nikli hai —<br>
+          tumse baat hui, toh khamoshi bhi thodi si khili hai.”
+        </blockquote>
+        <p class="translation">Some conversations are short, yet somehow leave the room feeling brighter.</p>
+      </div>
+    </section>
+
+    <section class="photo-panel panel-two" aria-label="Second note over photo two">
+      <div class="photo-overlay"></div>
+      <div class="panel-content reveal wide">
+        <div class="eyebrow">02 · what happens before & after</div>
+        <p class="big-note">“I don't know if you'll believe this, but before speaking to you, I feel a lot of curiosity; while talking, I feel nervous; and after the conversation ends, I feel a great deal of excitement.”</p>
+        <div class="mood-row" aria-label="feelings sequence">
+          <span>curious ✨</span>
+          <span class="arrow">→</span>
+          <span>nervous 😅</span>
+          <span class="arrow">→</span>
+          <span>excited 🌙</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="note-break">
+      <div class="note-card reveal">
+        <div class="tape" aria-hidden="true"></div>
+        <p class="eyebrow">confession, but make it simple</p>
+        <h2>Maybe it’s easier to talk when the conference call ends.</h2>
+        <p>So I made you a little doorway to a more normal conversation.</p>
+      </div>
+    </section>
+
+    <section class="photo-panel panel-three" id="message" aria-label="Third note over photo three">
+      <div class="photo-overlay"></div>
+      <div class="panel-content reveal contact-panel">
+        <div class="eyebrow">03 · one small invitation</div>
+        <p class="big-note highlight">“If you wish, you can message or call me personally at <strong>8509493016</strong>, as the conference call setup feels a bit awkward.”</p>
+        <p class="tiny-note">Only if you’re comfortable. No expectation — just an open invitation. 🌷</p>
+        <div class="action-row">
+          <a class="action primary" href="tel:8509493016">Call me <span>☎</span></a>
+          <a class="action secondary" href="sms:8509493016">Send a message <span>💬</span></a>
+        </div>
+      </div>
+      <div class="pulse-ring" aria-hidden="true"></div>
+    </section>
+
+    <section class="closing">
+      <div class="closing-inner reveal">
+        <div class="tiny-stars">✦ ✧ ✦</div>
+        <h2>That’s all.</h2>
+        <p>Two calls were enough to make me curious.<br>Maybe one real conversation can tell us a little more.</p>
+        <div class="signature">— from someone trying not to overthink this 🙂</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">Made with HTML, CSS, a little animation, and a very real amount of nervousness.</footer>
+
+  <script>
+const revealItems = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.16 });
+revealItems.forEach(item => observer.observe(item));
+
+// Tiny interactive touch: gently nudge the background on pointer movement on desktop.
+if (window.matchMedia('(pointer:fine)').matches) {
+  document.querySelectorAll('.photo-panel').forEach(panel => {
+    panel.addEventListener('pointermove', (event) => {
+      const rect = panel.getBoundingClientRect();
+      const x = (event.clientX - rect.left) / rect.width - 0.5;
+      const y = (event.clientY - rect.top) / rect.height - 0.5;
+      panel.style.backgroundPosition = `${50 + x * 2}% ${50 + y * 2}%`;
+    });
+    panel.addEventListener('pointerleave', () => panel.style.backgroundPosition = 'center');
+  });
+}
+
+</script>
+</body>
+</html>
